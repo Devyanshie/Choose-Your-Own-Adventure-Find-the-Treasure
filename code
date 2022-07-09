@@ -1,0 +1,56 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+path = input("Your in the hallway of a haunted mansion, there are 3 paths you can go down, left, right, or center. Which do you choose?\n")
+path2 = path.lower()
+
+if path2 == "left":
+  wait_or_swim = input("You managed to find your way out of the haunted mansion. Coming out of the house you find yourself at an ocean dock, do you wait for a boat to find you or try to swim across the ocean to land?\n")
+  wait_or_swim2 = wait_or_swim.lower()
+  if wait_or_swim2 == "wait":
+    colored_houses = input("A kind fisherman agreed to help you cross the ocean, after reaching land you wandered for a bit and stumbled into a ghost town, there are 4 colorful houses set before you, the 1st is red, 2nd is pink, 3rd is blue, and the final house is yellow. Which color house do you deced to enter?\n")
+    colored_houses2 = colored_houses.lower()
+    if colored_houses2 == "yellow":
+      dusty_box = input("As you open the door for the yellow house you find a dusty box, do you open the box or leave it be?\n")
+      dusty_box2 = dusty_box.lower()
+      if dusty_box2 == "open":
+        print("You open the box and find box of gold coins! Congrats! You found the treasure!")
+      else:
+        print("You leave the box and head home dissapointed you didn't find the treasure. Game Over.")
+    elif colored_houses2 == "red":
+      print("As you open the door for the red house you hear something hissing from the next room over, you decide to investigate, when you get to the next room you see an aggressive feral cat, the cat pounces onto you. Game Over.")
+    elif colored_houses2 == "pink":
+      print("As you open the door for the pink house you notice a bunch of angry bees surrounding you, the house was an apiary and you intruded into the bees home. Game Over.")
+    else:
+      print("As you open the door for the blue house you notice your throat getting irritated, the air was filled with poisonous gas. Game Over.")
+  else:
+    print("You decide to try to swim across the ocean to get to land, a quarter of the way through you start running out of energy and oxygen, the ocean is too long long to swim across and theres no place to take a break from swimming. Game Over.")
+elif path2 == "center":
+  print("You walk through the path for hours never finding the exit, the room never ended, you were trapped there forever. Game Over.")
+else:
+  print("You walk through the path and come across a library, you get distracted and go in, after spending some time looking through books and reading you start to feel a chill. As you turn around you come faced to faced with a mob of ghouls. Game Over.")
